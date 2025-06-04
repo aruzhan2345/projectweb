@@ -1,189 +1,214 @@
-Project Overview
+## Project Overview
 
-AituCritic is a modern, responsive movie review platform that allows users to:
+**AituCritic** is a modern, responsive movie review platform that allows users to:
+- Browse and search for movies.  
+- View detailed movie information (poster, trailer, description, genres, director, composer, external ratings).  
+- Add personal reviews (name, text, star rating) and see paginated review lists.  
+- Manage a personalized Watchlist.  
+- Sign up / log in, with localStorage–based authentication and profile customization (avatar & nickname).  
+- Contact support via an interactive form and browse a FAQ section.  
 
-Browse and search for movies.
-View detailed movie information (poster, trailer, description, genres, director, composer, external ratings).
-Add personal reviews (name, text, star rating) and see paginated review lists.
-Manage a personalized Watchlist.
-Sign up / Log in, with localStorage–based authentication and profile customization (avatar & nickname).
-Contact support via an interactive form and browse a FAQ section.
-The platform uses semantic HTML, CSS Flexbox/Grid, media queries, and JavaScript (vanilla JS + Fetch API) for dynamic content and interactivity.
+The platform uses semantic HTML, CSS (Flexbox/Grid), media queries, and vanilla JavaScript (Fetch API) for dynamic content and interactivity.  
 
-Features
+---
 
-Semantic Layout
-Responsive Design (mobile-first approach)
-Search with Live Suggestions
-Horizontally Scrollable Carousels (Top Rated, New Releases, Recommended, Watchlist)
-Trailer Modals
-User Authentication (signup & login stored in localStorage)
-Profile Management (change avatar, edit nickname, display joined date)
-Watchlist (add/remove movies, horizontally scrollable carousel)
-Movie Details (fetched from TMDB API: poster, release date, vote average, vote count, genres, director/composer images)
-Add & Paginate Reviews (star rating UI, save reviews to localStorage, render newest-first, pagination)
-Support Page (contact form, FAQ collapsible sections)
-Accessibility Enhancements (ARIA labels, focus outlines)
-Optimized Assets (lazy loading of images/iframes, WebP where available)
-Deployed on GitHub Pages
-Technologies Used
+## Features
 
-HTML5 & Semantic Tags (<header>, <main>, <section>, <article>, <footer>)
-CSS3
-Flexbox & CSS Grid
-Media Queries (mobile-first)
-Custom properties (in support.css)
-JavaScript (ES6+)
-Vanilla JS for DOM manipulation, event handling, form validation, and localStorage
-Fetch API for TMDB integration
-IntersectionObserver API for lazy loading backgrounds and movie content
-Bootstrap 5 (for base styling and components)
-TMDB (The Movie Database) API
-GitHub Pages (for deployment)
+- **Semantic Layout**  
+- **Responsive Design** (mobile-first)  
+- **Search with Live Suggestions**  
+- **Horizontally Scrollable Carousels** (Top Rated, New Releases, Recommended, Watchlist)  
+- **Trailer Modals**  
+- **User Authentication** (signup & login stored in localStorage)  
+- **Profile Management** (change avatar, edit nickname, display joined date)  
+- **Watchlist** (add/remove movies, horizontally scrollable carousel)  
+- **Movie Details** (fetched from TMDB API: poster, release date, vote average, vote count, genres, director/composer images)  
+- **Add & Paginate Reviews** (star rating UI, save reviews to localStorage, render newest-first, pagination)  
+- **Support Page** (contact form, FAQ collapsible sections)  
+- **Accessibility Enhancements** (ARIA labels, focus outlines)  
+- **Optimized Assets** (lazy loading of images/iframes, WebP where available)  
+- **Deployed on GitHub Pages**  
+
+---
+
+## Technologies Used
+
+- **HTML5** (& semantic tags: `<header>`, `<main>`, `<section>`, `<article>`, `<footer>`, `<nav>`, `<aside>`)  
+- **CSS3**  
+  - Flexbox & CSS Grid  
+  - Media Queries (mobile-first)  
+- **JavaScript (ES6+)**  
+  - Vanilla JS: DOM manipulation, event handling, localStorage  
+  - Fetch API for TMDB integration  
+  - IntersectionObserver API for lazy loading  
+- **Bootstrap 5** (base styling & components)  
+- **TMDB (The Movie Database) API**  
+- **GitHub Pages** (deployment)  
 Criteria Coverage
 
 1. User Interface & Design
-Use of Semantic HTML
-All pages employ <header>, <main>, <section>, <article>, <footer>, <nav>, <aside>, etc., ensuring clear document structure.
-Aesthetics and Structure
-Consistent dark theme (#121212 background, white text) with red accents.
-Logical layout:
-Navbar at top → main content → footer on all pages.
-Movie details page splits into a poster/trailer row and info/review columns (.row, .col-md-*).
-Watchlist page uses a sidebar (<aside>) and main carousel (<div class="carousel-wrapper">).
+- Use of Semantic HTML
+All pages use semantic tags:
+<header>, <main>, <section>, <article>, <footer>, <nav>, <aside>.
+- Aesthetics & Structure
+Consistent dark theme (#121212 background, white text, red accents).
+- Logical layout structure:
+Navbar → main content → footer on each page.
+Movie details page: two-column row for poster/trailer, two-column row for description/reviews + info box.
+Watchlist page: sidebar (<aside>) and main carousel (<div class="carousel-wrapper">).
 CSS Layout Techniques
 Flexbox
-Navigation menu items (.navbar-nav .nav-item) aligned with d-flex and gap-3.
-Profile page: avatar & buttons aligned using flex and gap.
+.navbar-nav .nav-item aligned with d-flex and gap-3.
+Profile page uses flex + gap for avatar & buttons.
 Grid
-FAQ section uses CSS Grid (.faq-grid) for responsive columns.
-Movie carousels maintain a horizontal flex container (.movies-grid), while the sidebar uses flex for profile alignment.
+FAQ section: .faq-grid uses CSS Grid for responsive columns.
+Movie carousels: .movies-grid as a flex container.
 Media Queries
-Mobile‐first approach:
-Mobile styles under @media (max-width: 600px) or @media (max-width: 768px) adjust font sizes, hide scroll buttons, simplify layout.
-Breakpoints ensure readability on phones, tablets, and desktops.
-Comment: The interface demonstrates a solid understanding of semantic HTML and modern CSS layout (Flexbox & Grid).
+Mobile-first under @media (max-width: 600px) and @media (max-width: 768px): font-size adjustments, hide scroll buttons, stack columns.
+Comment: Demonstrates a structured, user-friendly interface using semantic HTML and modern CSS (Flexbox/Grid).
 2. Responsiveness & Cross-Browser Compatibility
 Responsiveness
-Pages adapt smoothly from 320 px (mobile) to 1920 px (desktop).
-Carousels become single‐column stacks on narrow viewports.
-Navigation collapses to a hamburger menu (< 768 px) via Bootstrap’s navbar-toggler.
+Adapts from 320 px (mobile) to 1920 px (desktop).
+Carousels collapse to single-column stacks on narrow viewports.
+Navbar collapses into a hamburger menu at < 768px.
 Cross-Browser Testing
-Verified functionality & styles on:
+Verified on:
 Google Chrome (latest)
 Mozilla Firefox (latest)
 Microsoft Edge (latest)
-Safari (Mac OS)
+Safari (MacOS)
 Mobile-First Approach
-Base styles assume mobile viewport; desktop enhancements added via media queries.
-Comment: The project was tested in major browsers and adapts to different screen sizes, following a mobile-first strategy.
+Base styles target mobile; enhancements added via media queries.
+Comment: Tested on major browsers and adapts correctly to various screen resolutions.
 3. Interactivity & JavaScript Usage
 Dynamic Elements
 Modal Windows
-Trailer modal on the homepage and movie details page uses Bootstrap’s modal component.
+Trailer modals on homepage and movie details page (Bootstrap modal).
 Form Validation & Feedback
-Signup validation: checks for empty fields and email duplicates, shows success/error messages.
-Login validation: checks credentials against localStorage, displays “Invalid email or password” or “Login successful!” feedback.
+Signup: ensure non-empty fields, no duplicate email → show inline messages.
+Login: validate credentials → “Invalid email or password” or “Login successful!” feedback.
+Add Review: require name, text, and star rating → alert(...) on failure.
 Animations
-Simple transform: scale(1.02) on .movie-card:hover.
-Smooth scroll behavior (scrollBy({ behavior: "smooth" })) for carousels.
+Hover scale on .movie-card:hover { transform: scale(1.02); }.
+Smooth carousel scrolling:
+carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
 Event Handling
 Used addEventListener() for:
-DOMContentLoaded (initialize UI and load data)
-Click events on buttons (carousel-button, pagination links, changeAvatarBtn, etc.)
-Input & change events (search input, avatar file input, star rating clicks)
-Responsive menu toggling handled by Bootstrap JS.
+DOMContentLoaded (initialize UI, load data)
+click events on buttons, pagination links, change-avatar button, star rating elements
+input/change events for search input and avatar file input
 DOM Manipulation
-document.querySelector(), getElementById(), innerHTML, classList, appendChild to dynamically build:
-Movie cards, carousels, search suggestions (<li> items), review cards (<article>), FAQ items toggling.
-Profile & Watchlist data loaded/saved from localStorage and rendered on screen.
-Comment: The project includes interactive elements (carousels, modals, forms, star-rating, FAQ toggles) implemented via vanilla JavaScript.
+document.querySelector(), getElementById(), innerHTML, classList, appendChild() to dynamically build:
+Movie cards, carousels, search suggestion <li> items, review cards (<article>), FAQ toggles.
+Profile & Watchlist data loaded/saved via localStorage and rendered in DOM.
+Comment: Includes interactive elements—carousels, modals, forms, star‐rating, FAQ toggles—using vanilla JavaScript.
 4. API Integration
-Fetching and Displaying Data from APIs
-TMDB API used to fetch:
-Movie details (/movie/{id} endpoint) for title, overview, poster, genres, release date, vote average/vote count.
-Movie videos (/movie/{id}/videos) for YouTube trailers.
-Movie credits (/movie/{id}/credits) for director and composer profiles.
+Fetching & Displaying Data
+TMDB API endpoints used in movieabout.js:
+/movie/{id} → title, overview, poster, genres, release date, vote average/count
+/movie/{id}/videos → filter for YouTube trailers → embed iframe
+/movie/{id}/credits → find Director and Composer → display profile images (w200)
 Handling API Responses
-JSON responses parsed with res.json().
-Rendered into the DOM:
-Poster URL (https://image.tmdb.org/t/p/w500 + poster_path)
-Trailer iframe URL (https://youtube.com/embed/ + videoKey)
-Credit images (w200 size) or fallback placeholder if missing.
-Genres displayed as <span class="badge bg-secondary">.
+Parsed JSON responses:
+fetch(detailsUrl)
+  .then(res => {
+    if (!res.ok) throw new Error(`TMDB fetch failed (status ${res.status})`);
+    return res.json();
+  })
+  .then(movie => {
+    document.querySelector(".movie-title").textContent = movie.title;
+    // ...
+  })
+  .catch(err => {
+    console.error("Error fetching movie details:", err);
+    alert("Failed to load movie details. Please try again later.");
+  });
+Rendered data into DOM: <img>, <span class="badge">, <iframe>, <h6> for director/composer.
 Error Handling
-if (!res.ok) → throw Error; caught in .catch(), display alert: “Failed to load movie details. Please try again later.”
-Warnings in console for missing videos or credits.
-Comment: Demonstrates use of fetch() for API requests, proper data rendering, and basic error handling.
+If res.ok === false, throw an error and show alert("Failed to load movie details...").
+Logged warnings for missing trailers or credits in console.warn().
+Comment: Demonstrates use of fetch() for API requests, correct rendering of data, and basic error handling.
 5. Forms and Data Validation
 Form Creation
-Used <form>, <input>, <textarea>, <select>, and <button> across pages:
-Signup (signup.html), Login (login.html), Add Review (inside movieabout.html), Contact (in support.html).
+Utilized <form>, <input>, <textarea>, <select>, <button> in:
+signup.html (name, email, password)
+login.html (email, password, “Remember me”)
+movieabout.html (“Add Your Review” form)
+support.html (contact form: First Name, Last Name, Email, Phone, Subject, Message, Terms checkbox)
 Client-Side Validation
-Signup: Checks that name, email, password are non-empty. Ensures no duplicate email in localStorage user list.
-Login: Verifies email/password combination against stored users.
-Add Review: Ensures name, text, and a star rating (1–5) are provided before submission.
+Signup:
+Prevent submission if any field is empty:
+if (!name || !email || !password) {
+  showMessage("Please fill all fields", "danger");
+  return;
+}
+Check duplicate email in localStorage:
+if (users.some(u => u.email === email)) {
+  showMessage("Email already in use", "danger");
+  return;
+}
+Login:
+Validate email/password against stored users; show “Invalid email or password.”
+Add Review:
+Require name and text (non-empty) and a star rating (1–5); else alert(...).
 Contact Form:
-<input required> attributes on First Name, Last Name, Email, Phone.
-<select required> on Subject.
-<textarea required> for message.
-Terms checkbox required.
+Fields marked required (First Name, Last Name, Email, Phone, Subject, Message, Terms).
 User Feedback
-Inline messages (<div id="signupMessage">, #loginMessage) styled with Bootstrap classes (text-success, text-danger).
-alert("Please fill in both your name and review.") if validation fails on Add Review.
-Support page does not actually submit but can show stubbed feedback on success/failure.
-Comment: Forms prevent invalid submissions and guide users with clear error/success messages.
+Inline messages:
+#signupMessage → text-success / text-danger classes.
+#loginMessage → text-success / text-danger.
+alert(...) for missing review inputs.
+Comment: Forms prevent invalid submissions and provide clear feedback to users.
 6. Code Optimization and Performance
-Code Minification & Refactoring
-CSS and JS are structured into page-specific files (e.g., homepage.css, movieabout.css, profile.js) rather than monolithic blobs.
-Unused code removed (e.g., fallback loaders hidden once content is ready).
+Code Structure & Refactoring
+Split CSS and JS into page-specific files (e.g., homepage.css, movieabout.css, profile.js).
+Removed unused code blocks and redundant imports.
 Image Optimization
-Used .webp versions for static backgrounds where possible (e.g., signup.html background).
-Poster and profile images fetched via TMDB in appropriate sizes (w500, w200) to avoid oversized downloads.
-Logo and icons use SVG or compressed PNG.
+Static backgrounds use .webp (e.g., signup.html background).
+TMDB images requested at appropriate sizes (w500 for posters, w200 for profile images).
+Logo and icons use compressed PNG or SVG.
 Lazy Loading
 loading="lazy" on <img> and <iframe> tags for posters/trailers.
 IntersectionObserver in login.js to lazy‐load background images (.lazy-bg).
-IntersectionObserver in movieabout.js for lazily injecting placeholder content if needed.
-Comment: The project demonstrates efficient code organization, lazy loading of large assets, and use of compressed image formats.
+IntersectionObserver in movieabout.js for lazy‐injecting placeholder content.
+Comment: Demonstrates efficient code organization, lazy loading of large assets, and use of optimized image formats.
 7. Deployment and Accessibility
 Project Deployment
-Hosted on GitHub Pages at:
+GitHub Pages:
 https://YourUsername.github.io/AituCritic/
 Public Availability
-Users can browse live via the URL without any backend dependencies.
+Live site accessible without any server backend.
 Code Readability & Documentation
-Inline comments in JS files explain key logic (e.g., “// Load stored reviews”, “// Change avatar logic”).
-This README.md documents the project, features, setup instructions, and how each criterion is met.
+Inline comments in JS files explain key logic (e.g., “// Load stored reviews”).
+This README.md documents features, setup, and how each criterion is met.
 Accessibility
-ARIA labels on navigation toggles (e.g., aria-label="Scroll left") and trailer modal.
-Sufficient color contrast (white text on dark backgrounds).
-Focus outlines preserved for keyboard navigation (no outline: none on interactive elements).
-Comment: The project is live on GitHub Pages, includes documentation, and adheres to basic accessibility standards.
+ARIA attributes for navigation toggles (e.g., aria-label="Scroll left").
+Sufficient color contrast (white on dark).
+Focus outlines preserved for keyboard navigation (no outline: none).
+Comment: The project is live on GitHub Pages, includes comprehensive documentation, and follows basic accessibility standards.
 Minimum Number of Pages
 
-The project includes six distinct pages, each linked via a consistent navigation menu:
+This project includes seven distinct, interlinked pages (via a <nav> on each):
 
 Home (index.html)
-Banner (semantic <section class="banner">)
-Search results (dynamically shown/hidden)
-Carousels: Top Rated, New Releases, Recommended
+Sections: Banner, Search, Top Rated, New Releases, Recommended
 Movie Details (movieabout.html)
-Poster & trailer (two-column layout)
-Description, genres, reviews, add review form (five sections with semantic <section> tags)
-Movie info box (release year, ratings, director, composer)
+Two-column layout: Poster & Trailer
+Sections: Description, Genres, Reviews (with pagination), Add Review, Movie Info Box
 Login (login.html)
-<form> with email/password inputs, “Remember me” checkbox, “Forgot password?” link
+Fields: Email, Password, “Remember me” checkbox, “Forgot password?” link
 Signup (signup.html)
-<form> with name, email, password, and messaging section
+Fields: Name, Email, Password
 Profile (profile.html)
-Avatar uploader, nickname editor, joined date display, link to Watchlist
+Avatar upload, Nickname edit, Joined date display, Link to Watchlist
 Watchlist (watchlist.html)
-Sidebar profile card and horizontally scrollable watchlist carousel
+Sidebar (profile + navigation)
+Main: Horizontally scrollable movie cards (Watchlist)
 Support (support.html)
-Contact form (<form>) and FAQ section (.faq-grid)
-Minimum structure requirement is satisfied:
-Homepage (with data display: carousels)
-Form page (Login/Signup/Support)
-Data display page (Movie Details, Watchlist)
-Navigation menu links on every page ensure seamless travel between them.
+Contact form (First Name, Last Name, Email, Phone, Subject, Message, Terms)
+FAQ grid with collapsible items
+Minimum structure satisfied:
+Homepage with data display (carousels)
+Form pages (Login, Signup, Support)
+Data display pages (Movie Details, Watchlist)
+Navigation menu (<nav>) present on all pages
