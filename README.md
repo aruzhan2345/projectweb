@@ -185,8 +185,7 @@ The platform uses semantic HTML, CSS (Flexbox/Grid), media queries, and vanilla 
 ## 7. **Deployment and Accessibility**
 
 - **Deployment**  
-  - Hosted via GitHub Pages:  
-    [https://YourUsername.github.io/AituCritic/](https://YourUsername.github.io/AituCritic/)
+  - Hosted via GitHub Pages
 
 - **Documentation**  
   - Inline JS comments (`// Load reviews`, `// Change avatar`)  
