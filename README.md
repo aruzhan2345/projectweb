@@ -45,7 +45,7 @@ The platform uses semantic HTML, CSS (Flexbox/Grid), media queries, and vanilla 
 - **TMDB (The Movie Database) API**  
 - **GitHub Pages** (deployment)  
 
-# ✅ Criteria Coverage
+# Criteria Coverage
 
 ## 1. **User Interface & Design**
 
@@ -71,7 +71,7 @@ The platform uses semantic HTML, CSS (Flexbox/Grid), media queries, and vanilla 
     - `@media (max-width: 600px / 768px)` adjust fonts, hide scroll buttons, simplify layout.  
     - Breakpoints ensure content readability across phones, tablets, and desktops.
 
-> 💬 *Comment:* Strong use of semantic tags and modern CSS layout techniques.
+>  *Comment:* Strong use of semantic tags and modern CSS layout techniques.
 
 ---
 
@@ -92,7 +92,7 @@ The platform uses semantic HTML, CSS (Flexbox/Grid), media queries, and vanilla 
 - **Mobile-First Design**  
   - Base styles target mobile first, then enhance for larger screens via media queries.
 
-> 💬 *Comment:* Responsiveness is well implemented and tested on all major browsers.
+>  *Comment:* Responsiveness is well implemented and tested on all major browsers.
 
 ---
 
@@ -116,7 +116,7 @@ The platform uses semantic HTML, CSS (Flexbox/Grid), media queries, and vanilla 
     - Movie cards, review sections, search suggestions, FAQ toggles, and profile/watchlist UI  
     - All data comes from TMDB API or `localStorage`
 
-> 💬 *Comment:* Includes multiple interactive features using vanilla JavaScript.
+>  *Comment:* Includes multiple interactive features using vanilla JavaScript.
 
 ---
 
@@ -138,7 +138,7 @@ The platform uses semantic HTML, CSS (Flexbox/Grid), media queries, and vanilla 
   - Alerts shown on failure  
   - Console warnings for missing videos or data
 
-> 💬 *Comment:* Efficient API fetching and error handling are in place.
+>  *Comment:* Efficient API fetching and error handling are in place.
 
 ---
 
@@ -158,7 +158,7 @@ The platform uses semantic HTML, CSS (Flexbox/Grid), media queries, and vanilla 
   - Inline messages using Bootstrap classes (`text-success`, `text-danger`)  
   - `alert()` for failed validation in Add Review
 
-> 💬 *Comment:* Forms are well-validated and guide users with clear feedback.
+>  *Comment:* Forms are well-validated and guide users with clear feedback.
 
 ---
 
@@ -178,7 +178,7 @@ The platform uses semantic HTML, CSS (Flexbox/Grid), media queries, and vanilla 
   - `loading="lazy"` for `<img>` and `<iframe>`  
   - `IntersectionObserver` used in `login.js` and `movieabout.js` for deferred loading
 
-> 💬 *Comment:* Optimized structure, assets, and performance with lazy loading.
+>  *Comment:* Optimized structure, assets, and performance with lazy loading.
 
 ---
 
@@ -197,11 +197,11 @@ The platform uses semantic HTML, CSS (Flexbox/Grid), media queries, and vanilla 
   - High contrast: white on dark background  
   - Keyboard navigation supported (focus outlines kept)
 
-> 💬 *Comment:* Live project includes basic accessibility and good documentation.
+>  *Comment:* Live project includes basic accessibility and good documentation.
 
 ---
 
-## 📄 Minimum Number of Pages
+##  Minimum Number of Pages
 
 - **index.html** – Home page with banners and carousels  
 - **movieabout.html** – Movie details, reviews, trailer  
@@ -211,4 +211,4 @@ The platform uses semantic HTML, CSS (Flexbox/Grid), media queries, and vanilla 
 - **watchlist.html** – Saved movies carousel and sidebar  
 - **support.html** – Contact form and FAQ
 
-> 💬 *Comment:* Meets page count and navigation requirements for a complete project.
+>  *Comment:* Meets page count and navigation requirements for a complete project.
